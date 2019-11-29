@@ -17,23 +17,23 @@ public class NumerosPrimos {
     public static boolean p = false;
 
     public static void main(String arg[]) {
-        int nD = 0;
-        int nd = 0;
-        nD = Integer.parseInt(arg[0]);
-        if (nD <= 0) {
+        int correctNumber = 0;
+        int digitNumber = 0;
+        correctNumber = Integer.parseInt(arg[0]);
+        if (correctNumber <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
         for (int i = 1; i <= 99999; i++) {
-            int div = i;
-            int c = 0;
+            int division = i;
+            int cont = 0;
 
-            while (div != 0) {
-                div = div / 10;
-                c++;
+            while (division != 0) {
+                division = division / 10;
+                cont++;
             }
-            nd = c;
+            digitNumber = cont;
 
-            if (nd == nD) {
+            if (digitNumber == correctNumber) {
                 if (i < 4) {
                     p = true;
                 } else {
